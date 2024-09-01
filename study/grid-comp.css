@@ -1,8 +1,8 @@
 /* Using grid-template-areas instead of grid-template */
 .container{
     display: grid;
-    grid-template-columns: 300px 1fr 100px;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: minmax(100px, 200px) minmax(400px, 1fr) minmax(50px, 150px);
+    grid-template-rows: 100px minmax(200px, 600px) auto;
     grid-template-areas:
     "header         header      header"
     "left-menu      main        right-menu"
@@ -10,25 +10,40 @@
 }
 
 /* minmax and auto */
-.container {
+/* .container {
     display: grid;
     grid-template:
     "header     header      header"     100px
     "left-menu  main        right-menu" 1fr
     "footer     footer      footer"     100px/
     300px       1fr         100px;
-}
+} */
 
 .main {
     display: grid;
     grid-area: main;
     background-color: lightseagreen;
-    height: 400px;
-    align-content: center;
+    min-height: 400px;
+    /* overflow-y: scroll; */
+    /* align-content: center; */
+    /* align-content: end; */
+    /* align-items: end; */
+    /* justify-content: center; */
+    /* justify-items: end; */
+    place-items: center;
+    place-content: center;
 }
 
-.content {
+.main > img {
+    /* justify-self: center; */
+    /* align-self: center; */
+    place-self: center;
+}
 
+.main > h2 {
+    /* align-self: center; */
+}
+.content {
 }
 
 .header{
