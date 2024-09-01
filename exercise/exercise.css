@@ -3,10 +3,12 @@
 }
 
 .container {
+    /* viewport width. Viewport = visible part of browser window */
     width: 100vw;
+    /* viewport height */
     height: 100vh;
     display: grid;
-    grid-template-columns: minmax(auto, auto) minmax(200px, 1fr) 200px;
+    grid-template-columns: auto minmax(200px, 1fr) 200px;
     grid-template-rows: 50px 1fr 50px;
     grid-template-areas:
     "header     header  header"
@@ -29,10 +31,11 @@
     display: grid;
     grid-area: main;
     background-color: #00ff0070;
+    /* place-content: center; Alternative approach*/
 }
 
 .main > h1 {
-    justify-self: center;
+    place-self: center;
 }
 
 .right-menu {
