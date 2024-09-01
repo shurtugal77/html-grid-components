@@ -1,6 +1,12 @@
 /* Using grid-template-areas instead of grid-template */
 .container{
-
+    display: grid;
+    grid-template-columns: 300px 1fr 100px;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas:
+    "header         header      header"
+    "left-menu      main        right-menu"
+    "footer         footer      footer";
 }
 
 /* minmax and auto */
