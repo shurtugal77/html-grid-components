@@ -1,0 +1,24 @@
+.column-demo{
+    display: grid;
+    max-width: 800px;
+    border: solid 1px red;
+    padding: 5px;
+    gap: 5px;
+    /* grid-template-columns: 80px 80px 80px 80px 80px; too repetetive, also applies for grid-template rows */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-auto-rows: 100px;
+}
+
+/* @media screen and (max-width: 800px) {
+    .column-demo{
+        grid-template-columns: repeat(5, 80px);
+    }
+} */
+
+.column-demo > div {
+    display: grid;
+    place-items: center;
+    /* height: 50px; */
+    border: dotted 2px green;
+    font-weight: bold;
+}
