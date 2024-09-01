@@ -1,0 +1,46 @@
+/* Using grid-template-areas instead of grid-template */
+.container{
+
+}
+
+/* minmax and auto */
+.container {
+    display: grid;
+    grid-template:
+    "header     header      header"     100px
+    "left-menu  main        right-menu" 1fr
+    "footer     footer      footer"     100px/
+    300px       1fr         100px;
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    background-color: lightseagreen;
+    height: 400px;
+    align-content: center;
+}
+
+.content {
+
+}
+
+.header{
+    grid-area: header;
+    background-color: lightcoral;
+}
+
+.left-menu {
+    grid-area: left-menu;
+    background-color: lightskyblue;
+}
+
+.right-menu {
+    grid-area: right-menu;
+    background-color: lightgreen;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightpink;
+}
