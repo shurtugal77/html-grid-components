@@ -53,8 +53,9 @@
     display: grid;
     grid-area: right-menu;
     background-color: #ff00ff70;
-    grid-auto-rows: 300px;
-    gap: 20px;
+    /* grid-auto-rows: 300px; alternative solution*/
+    grid-template-rows: repeat(3, 300px);
+    gap: 10px;
     padding: 5px 2.5px 5px 5px;
 }
 
