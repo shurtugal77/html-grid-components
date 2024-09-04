@@ -39,18 +39,139 @@
     https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors
 */
 
-.two-column-grid__expand-two {}
+/* div > div {
+  gap: 10px;
+} */
 
-.three-column-grid {}
+/* .container {
+  gap: 10px
+} */
 
-.three-column-grid__expand-two {}
+.two-column-grid__expand-two {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+}
 
-.five-column-grid {}
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
 
-.center-grid {}
+.three-column-grid__expand-two {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  gap: 10px;
+}
 
-.grid-in-grid-1 {}
+.five-column-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
 
-.grid-in-grid-2 {}
+.center-grid {
+  display: grid;
+  grid-template-columns: 300px;
+  place-content: center;
+}
 
-.grid-madness {}
+.grid-in-grid-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid-in-grid-1 > div:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid-in-grid-1 > div:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.grid-in-grid-2 {
+  display: grid;
+  grid-template-columns: 100px 1fr 300px;
+  gap: 10px;
+}
+
+.grid-in-grid-2 > div:nth-of-type(3) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid-madness {
+  display: grid;
+  grid-template-columns: 100px 1fr 200px;
+  gap: 10px;
+}
+
+/* last box -> first cell */
+.grid-madness > .box:nth-of-type(5) {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-template-columns: 50px repeat(4, 125px);
+  gap: 10px;
+}
+/* third inner box -> first cell */
+.grid-madness > .box:nth-of-type(5) > .inner-box:nth-of-type(3) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* third box -> second cell */
+.grid-madness > .box:nth-of-type(3) {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
+  grid-template-rows: repeat(3, 50px);
+  gap: 10px
+}
+
+/* fourth box -> third cell */
+.grid-madness > .box:nth-of-type(4) {
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+}
+.inner-box {
+  display: grid;
+  place-items: start;
+}
+
+/* second box -> fourth cell */
+.grid-madness > .box:nth-of-type(2) {
+  display: grid;
+  grid-template-rows: .75fr;
+}
+
+/* first box -> last cell */
+.grid-madness > .box:nth-of-type(1) {
+  display: grid;
+  grid-column: 1;
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-template-columns: repeat(2, 125px) 50px;
+  gap: 10px;
+  justify-content: end;
+}
+/* second inner box -> last cell */
+.grid-madness > .box:nth-of-type(1) > .inner-box:nth-of-type(2) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.grid-madness > .box:nth-of-type(1) > .inner-box {
+  
+}
