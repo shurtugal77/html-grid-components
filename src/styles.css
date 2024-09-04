@@ -39,6 +39,7 @@
     https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors
 */
 
+/* Reuse gap in container and sub elements */
 .container {
   gap: 10px;
 }
