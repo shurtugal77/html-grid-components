@@ -99,6 +99,7 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* MADNESS STARTS HERE */
 .grid-madness {
   display: grid;
   grid-template-columns: 100px 1fr 200px;
@@ -160,3 +161,33 @@
   grid-column: 3;
   grid-row: 1;
 }
+/* MADNESS ENDS HERE */
+
+
+/* MADNESS best practice starts here */
+
+/* Only example for reordering grid cells - not actually the first element (html modified in GRID REVIEW */
+
+/* .grid-madness > .box {
+  display: grid;
+  justify-content: end;
+  gap: 10px;
+  grid-template-columns: 100px 100px 50px;
+  grid-template-areas:
+  "rectangle1 rectangle2 square";
+} */
+
+/* Beispiel um nur die erste Box zu selecten, wenn nicht via HTML Change möglich */
+/* .grid-madness > .box:first-of-type > .inner-box:nth-of-type(1) {
+  grid-area: rectangle1;
+}
+
+.grid-madness > .box:first-of-type > .inner-box:nth-of-type(3) {
+  grid-area: square;
+}
+
+.grid-madness > .box:first-of-type > .inner-box:nth-of-type(3) {
+  grid-area: rectangle2;
+} */
+
+/* MADNESS best practice ends here */
