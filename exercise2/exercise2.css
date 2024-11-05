@@ -69,3 +69,16 @@
     grid-area: footer;
     background-color: #00aaff70;
 }
+
+/* PSEUDO SELECTORS */
+
+/* nth of type */
+/* every odd element: :nth-of-type(2n+1) */
+/* every even element: :nth-of-type(2n) */
+.left-menu > div:nth-of-type(2n+1) {
+    background-color: lightgreen;
+}
+
+.left-menu > div:nth-child(even) {
+    border: solid 3px red;
+}

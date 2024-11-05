@@ -74,7 +74,7 @@
   place-content: center;
 }
 
-.grid-in-grid-1 {
+/* .grid-in-grid-1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -87,7 +87,21 @@
 .grid-in-grid-1 > div:nth-of-type(2) {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+} */
+
+/* Variante für grid-in-grid-1 STARTS HERE*/
+
+.grid-in-grid-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
+.grid-in-grid-1 > .box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+}
+
+/* Variante für grid-in-grid-1 ENDS HERE*/
+
 
 .grid-in-grid-2 {
   display: grid;
